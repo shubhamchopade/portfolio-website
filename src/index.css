@@ -1,3 +1,8 @@
+* {
+  list-style: none;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +10,145 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header-elements {
+  padding: 1rem 0;
+  color: #A9A9A9;
+}
+.header-elements:hover {
+  color: #555555;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  color: #555555;
+}
+
+.footer-elements:nth-child(2) {
+  padding-left: 2rem;
+}
+
+.intro-container {
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+.intro-hi {
+  font-size: 20rem;
+  padding: 0 1rem;
+  margin: 0;
+  font-weight: 900;
+  background: linear-gradient(270deg, #232323, #9fbfbf, #273b3b);
+  background-size: 400% 400%;
+  background-position: 0 50%;
+  -webkit-animation: AnimationName 10s ease infinite;
+  -moz-animation: AnimationName 10s ease infinite;
+  animation: AnimationName 10s ease infinite;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+.intro-welcome {
+  font-size: 5rem;
+  line-height: 4rem;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.link {
+  text-decoration: none;
+  color: #555555;
+}
+
+.link:hover {
+  text-decoration: #555555 underline;
+}
+
+.about-container {
+  display: flex;
+  padding: 2rem 0;
+}
+.about-container img{
+  border-radius: 50%;
+}
+.about-container h3{
+  font-size: 5rem;
+}
+.about-container p{
+  font-size: 1.4rem;
+}
+
+
+
+@media (max-width: 800px) {
+  body{
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .intro-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .intro-hi {
+    font-size: 15rem;
+    padding: 0 1rem;
+    margin: 0;
+    line-height: 200px;
+  }
+  
+  .intro-welcome {
+    font-size: 2rem;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .about-image-container img{
+    width: 70%;
+  }
+  .about-image-container{
+    display: flex;
+    justify-content: center;
+  }
 }
